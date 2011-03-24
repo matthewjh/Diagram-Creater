@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='diagram'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.google.gwt.user.User'/>
+
+  <!-- Specify the app entry point class.                         -->
+  <entry-point class='com.matthew.diagram.client.ApplicationEntryPoint'/>
+
+  <!-- Other module inherits                                      -->
+  <inherits name="com.google.gwt.activity.Activity"/>
+  <inherits name="com.google.gwt.place.Place"/>
+
+  <!-- Use ClientFactoryImpl by default -->
+  <replace-with class="com.matthew.diagram.client.ClientFactoryImpl">
+    <when-type-is class="com.matthew.diagram.client.ClientFactory"/>
+  </replace-with>
+
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client'/>
+  <source path='shared'/>
+
+</module>
